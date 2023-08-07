@@ -234,15 +234,3 @@ else:
 plt.colorbar(label='Percent of True Values Predicted')
 plt.title('Normalized Confusion Matrix')
 plt.savefig('/home/aupton/dune_cnn/model_plot/'+test_name+'_con_mat.pdf')
-
-"""
-#Removing final chekpoint
-os.rmdir('model_save/recent_model_checkpoint_epoch_%s/assets'%(num_epochs-5))
-path = 'model_save/recent_model_checkpoint_epoch_%s/variables/'%(num_epochs-5)
-for file_name in os.listdir(path):
-    file = path + file_name
-    os.remove(file)
-os.rmdir('model_save/recent_model_checkpoint_epoch_%s/variables'%(num_epochs-5))
-os.remove('model_save/recent_model_checkpoint_epoch_%s/saved_model.pb'%(num_epochs-5))
-os.rmdir('model_save/recent_model_checkpoint_epoch_%s'%(epochs-5))
-"""
