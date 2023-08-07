@@ -17,6 +17,7 @@ print(tf.config.list_physical_devices())
 #Collecting Input
 print()
 print('--------------------------------------------------------------------------------------------')
+path = glob.glob('event_files/*.info')
 n_channels = 3
 num_nu = int(input('Number of neutrinos: '))
 if num_nu > 139301:
@@ -91,7 +92,6 @@ def plot_image(pixel_maps):
         axs[i].title.set_text(titles[i])
     plt.show()
     
-path = 'event_files/*.info'
 file_list_all = glob.glob(path)[:num_nu]
 file_list = []
 if include_tau != 'y':
